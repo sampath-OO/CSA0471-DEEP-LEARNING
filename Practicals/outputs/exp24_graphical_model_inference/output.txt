@@ -1,0 +1,31 @@
+Exact inference by enumeration:
+  P(Burglary=1 | nothing) = 0.00100
+  P(Burglary=1 | {'JohnCalls': 1}) = 0.01628
+  P(Burglary=1 | {'JohnCalls': 1, 'MaryCalls': 1}) = 0.28417
+  P(Alarm=1 | {'JohnCalls': 1, 'MaryCalls': 1}) = 0.76069
+  P(Earthquake=1 | {'JohnCalls': 1, 'MaryCalls': 1}) = 0.17607
+  P(Burglary=1 | {'Alarm': 1}) = 0.37355
+  P(Burglary=1 | {'Alarm': 1, 'Earthquake': 1}) = 0.00327
+  P(MaryCalls=1 | {'Burglary': 1}) = 0.65861
+-> Explaining away: P(B | Alarm) = 0.3736 but P(B | Alarm, Earthquake) = 0.0033
+
+Forward sampling (N=100000) marginals:
+Burglary      0.00111
+Earthquake    0.00198
+Alarm         0.00264
+JohnCalls     0.05289
+MaryCalls     0.01189
+Exact P(JohnCalls=1) = 0.05214, P(MaryCalls=1) = 0.01174
+
+Pandas cross-tab of samples, Alarm vs JohnCalls (counts):
+ JohnCalls      0     1
+Alarm                 
+0          94684  5052
+1             27   237
+
+Approximate inference of P(Burglary=1 | JohnCalls=1, MaryCalls=1); exact = 0.28417
+  N=   100: rejection = nan (kept 0 samples) | likelihood weighting (N=100) = 0.0000
+  N=  1000: rejection = 0.3333 (kept 3 samples) | likelihood weighting (N=1000) = 0.4419
+  N= 10000: rejection = 0.3333 (kept 18 samples) | likelihood weighting (N=10000) = 0.2654
+  N=100000: rejection = 0.3062 (kept 209 samples) | likelihood weighting (N=20000) = 0.2841
+[saved] outputs/exp24_graphical_model_inference/bn_inference.png

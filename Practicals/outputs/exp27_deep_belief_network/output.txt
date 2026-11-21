@@ -1,0 +1,15 @@
+RBM layer 1 (64 -> 48): reconstruction MSE 0.0730 -> 0.0350
+RBM layer 2 (48 -> 24): reconstruction MSE 0.0429 -> 0.0109
+
+Logistic-regression test accuracy on different representations:
+  Raw pixels (64)   : 0.9630
+  DBN layer 1 (48)  : 0.9593
+  DBN layer 2 (24)  : 0.8593
+  PCA (24)          : 0.9519
+
+With only 50 labelled training samples:
+  Raw pixels  : 0.8500
+  DBN layer 2 : 0.7611
+[saved] outputs/exp27_deep_belief_network/dbn_representations.png
+[saved] outputs/exp27_deep_belief_network/dbn_reconstructions.png
+[saved] outputs/exp27_deep_belief_network/dbn_generated.png

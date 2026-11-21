@@ -1,0 +1,27 @@
+True mixing matrix A:
+ [[1.  1.  1. ]
+ [0.5 2.  1. ]
+ [1.5 1.  2. ]] 
+Mixed signals: (4000, 3)
+
+|correlation| between estimated and true sources
+FastICA:
+ [[1.    0.008 0.   ]
+ [0.015 0.012 1.   ]
+ [0.012 1.    0.011]] 
+best-match per true source: [1. 1. 1.]
+PCA (whitened):
+ [[0.48  0.604 0.624]
+ [0.456 0.788 0.406]
+ [0.749 0.12  0.668]] 
+best-match per true source: [0.749 0.788 0.668]
+
+Mean best-match correlation: ICA = 0.9999, PCA = 0.7349
+Excess kurtosis of true sources: [-1.484 -1.99  -1.168] 
+of ICA components: [-1.483 -1.166 -1.989] 
+of PCA components: [-0.362 -0.953 -0.753] 
+of mixtures: [-0.331 -1.153 -0.348]
+ICA converged in 4 iterations
+[saved] outputs/exp22_independent_component_analysis/ica_signals.png
+[saved] outputs/exp22_independent_component_analysis/ica_scatter.png
+[saved] outputs/exp22_independent_component_analysis/ica_matching.png

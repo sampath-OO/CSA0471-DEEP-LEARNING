@@ -1,0 +1,6 @@
+
+--- stderr ---
+Experiment 11: TensorFlow/Keras is required. Install with `pip install tensorflow` and re-run.
+
+[NOT EXECUTED] This experiment needs TensorFlow/Keras, which was not available when this package was built.
+Run it on your machine/Colab: python codes/exp11_cnn_image_classification.py

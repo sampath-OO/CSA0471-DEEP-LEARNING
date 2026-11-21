@@ -1,0 +1,9 @@
+Backend: NumPy fallback | train samples: 300
+
+Method           train acc  val acc  test acc  val loss(min) epochs run
+Baseline            1.0000   0.9499    0.9472         0.1478        150
+L2 (λ=1e-2)         1.0000   0.9471    0.9389         0.2218        150
+Dropout (0.5)       1.0000   0.9499    0.9500         0.1438        150
+Early stopping      1.0000   0.9499    0.9389         0.1478         49
+[saved] outputs/exp10_regularization_comparison/regularization_comparison.png
+[saved] outputs/exp10_regularization_comparison/regularization_test_accuracy.png

@@ -1,0 +1,9 @@
+Gradient check W1: max |numerical - backprop| = 3.59e-11
+Gradient check b1: max |numerical - backprop| = 5.35e-11
+Gradient check W2: max |numerical - backprop| = 6.84e-11
+Gradient check b2: max |numerical - backprop| = 1.78e-11
+Backpropagation verified
+
+XOR predictions: [0.    0.999 0.999 0.002] -> classes [0 1 1 0] final loss 0.00119
+Two-moons training accuracy: 0.968, final loss 0.0907
+[saved] outputs/exp08_two_layer_backprop/backprop_results.png

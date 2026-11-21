@@ -1,0 +1,16 @@
+AND  : weights=[0.2 0.1], bias=-0.20, predictions=[0 0 0 1], targets=[0 0 0 1], accuracy=1.00, epochs=4
+OR   : weights=[0.1 0.1], bias=-0.10, predictions=[0 1 1 1], targets=[0 1 1 1], accuracy=1.00, epochs=4
+NAND : weights=[-0.2 -0.1], bias=0.20, predictions=[1 1 1 0], targets=[1 1 1 0], accuracy=1.00, epochs=6
+XOR  : weights=[-0.1  0. ], bias=0.00, predictions=[1 1 0 0], targets=[0 1 1 0], accuracy=0.50, epochs=100
+[saved] outputs/exp07_perceptron_forward/logic_gates_perceptron.png
+-> XOR is not linearly separable, so a single perceptron cannot learn it.
+
+2-D blobs: accuracy 1.000, mistakes per epoch [3, 1, 2, 1, 0]
+
+Forward propagation (2-3-1 network, sigmoid):
+x = [[1. 2.]] 
+z1 = xW1+b1 = [[ 1.7  0.1 -0.7]] 
+a1 = sigmoid(z1) = [[0.8455 0.525  0.3318]] 
+z2 = [[0.6653]] 
+output a2 = [[0.6604]]
+[saved] outputs/exp07_perceptron_forward/perceptron_blobs.png

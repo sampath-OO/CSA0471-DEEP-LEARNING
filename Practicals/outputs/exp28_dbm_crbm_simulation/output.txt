@@ -1,0 +1,22 @@
+=== Part A: Deep Boltzmann Machine 64-40-20 ===
+  DBM epoch   1: reconstruction MSE 0.1326
+  DBM epoch  11: reconstruction MSE 0.1166
+  DBM epoch  21: reconstruction MSE 0.0876
+  DBM epoch  31: reconstruction MSE 0.0773
+  DBM epoch  41: reconstruction MSE 0.0704
+Final reconstruction MSE: DBM (mean-field, 2 hidden layers) = 0.0659 | single RBM (40 hidden) = 0.0442
+Mean pixel activity: data 0.346, DBM samples 0.359
+Mean energy of data (with mean-field h): -61.58 | of DBM samples: -60.97 | of noise: 43.52
+
+=== Part B: Convolutional RBM (6 filters of 3x3, weight sharing) ===
+  CRBM epoch   1: reconstruction MSE 0.1524
+  CRBM epoch   6: reconstruction MSE 0.0380
+  CRBM epoch  11: reconstruction MSE 0.0142
+  CRBM epoch  16: reconstruction MSE 0.0068
+  CRBM epoch  21: reconstruction MSE 0.0039
+  CRBM epoch  26: reconstruction MSE 0.0025
+Parameters: CRBM = 61 (shared filters) vs dense RBM with the same number of hidden units (6 x 6 x 6 = 216) = 14104
+CRBM final reconstruction MSE: 0.0019
+[saved] outputs/exp28_dbm_crbm_simulation/dbm_crbm_training.png
+[saved] outputs/exp28_dbm_crbm_simulation/crbm_filters.png
+[saved] outputs/exp28_dbm_crbm_simulation/crbm_reconstructions.png

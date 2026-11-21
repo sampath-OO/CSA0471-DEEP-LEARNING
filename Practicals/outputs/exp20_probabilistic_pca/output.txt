@@ -1,0 +1,20 @@
+Synthetic data: true noise variance = 0.3, PPCA estimate = 0.2965
+Subspace error ||P_true - P_est||_F = 0.02
+EM estimate of noise variance after 50 iterations = 0.2963; log-likelihood -40838.6 -> -24943.1
+Closed-form vs EM log-likelihood: -24925.64 -24943.1
+
+q | recon MSE | noise var sigma^2 | avg log-lik
+ 1 |   16.7901 |   17.0523 |   -174.22
+ 2 |   14.1217 |   14.5665 |   -170.70
+ 5 |    9.0298 |    9.7682 |   -162.40
+10 |    5.2519 |    6.1704 |   -154.55
+15 |    3.3576 |    4.3041 |   -149.55
+20 |    2.1978 |    3.0991 |   -145.77
+30 |    0.8920 |    1.5866 |   -139.88
+40 |    0.2701 |    0.6753 |   -134.77
+50 |    0.0095 |    0.0495 |   -123.43
+scikit-learn PCA(10).score (avg PPCA log-lik): -154.55 vs ours q=10: -154.55
+BIC-selected q: 50
+Denoising: MSE noisy->clean 9.023, PPCA(15) reconstruction->clean 5.239
+[saved] outputs/exp20_probabilistic_pca/ppca_analysis.png
+[saved] outputs/exp20_probabilistic_pca/ppca_denoising.png

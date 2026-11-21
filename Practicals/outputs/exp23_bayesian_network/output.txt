@@ -1,0 +1,35 @@
+Nodes: ['Burglary', 'Earthquake', 'Alarm', 'JohnCalls', 'MaryCalls']
+Edges: [('Burglary', 'Alarm'), ('Earthquake', 'Alarm'), ('Alarm', 'JohnCalls'), ('Alarm', 'MaryCalls')]
+Is DAG: True | topological order: ['Burglary', 'Earthquake', 'Alarm', 'JohnCalls', 'MaryCalls']
+Markov blanket of Alarm: parents ['Burglary', 'Earthquake'] children ['JohnCalls', 'MaryCalls']
+
+CPT P(Burglary=1 | no parents):
+    prior -> 0.001
+
+CPT P(Earthquake=1 | no parents):
+    prior -> 0.002
+
+CPT P(Alarm=1 | Burglary, Earthquake):
+    {'Burglary': 1, 'Earthquake': 1} -> 0.95
+    {'Burglary': 1, 'Earthquake': 0} -> 0.94
+    {'Burglary': 0, 'Earthquake': 1} -> 0.29
+    {'Burglary': 0, 'Earthquake': 0} -> 0.001
+
+CPT P(JohnCalls=1 | Alarm):
+    {'Alarm': 1} -> 0.9
+    {'Alarm': 0} -> 0.05
+
+CPT P(MaryCalls=1 | Alarm):
+    {'Alarm': 1} -> 0.7
+    {'Alarm': 0} -> 0.01
+
+Probabilities sum to 1 for every row: True (each CPT stores P(X=1|pa); P(X=0|pa)=1-P)
+Number of free parameters: 10 vs 2^5 - 1 = 31 for the full joint table
+Check: sum over all 32 joint states = 1.0
+
+d-separation: Burglary _|_ Earthquake (marginally): True
+d-separation: Burglary _|_ Earthquake | Alarm: False (explaining away)
+d-separation: JohnCalls _|_ MaryCalls | Alarm: True
+
+(pgmpy not installed -> using built-in SimpleBN; the same code path is used for all numbers above/below)
+[saved] outputs/exp23_bayesian_network/bayesian_network.png

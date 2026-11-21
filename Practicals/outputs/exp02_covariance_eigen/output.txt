@@ -1,0 +1,36 @@
+            x1       x2
+count  500.000  500.000
+mean     2.197    3.124
+std      1.922    1.403
+min     -5.374   -1.944
+25%      0.835    2.196
+50%      2.173    3.187
+75%      3.483    4.081
+max      9.689    7.857
+
+Sample covariance matrix:
+ [[3.6938 2.2709]
+ [2.2709 1.9676]]
+Pandas df.cov():
+         x1      x2
+x1  3.6938  2.2709
+x2  2.2709  1.9676
+Correlation matrix:
+         x1      x2
+x1  1.0000  0.8423
+x2  0.8423  1.0000
+
+Eigenvalues: [5.26   0.4013]
+Eigenvectors (columns):
+ [[-0.8232  0.5678]
+ [-0.5678 -0.8232]]
+Check C v1 = λ1 v1: True
+Check C v2 = λ2 v2: True
+Trace(C) = 5.6614 | sum of eigenvalues = 5.6614
+det(C) = 2.1111 | product of eigenvalues = 2.1111
+
+Covariance after rotation (should be diagonal):
+ [[ 5.26   -0.    ]
+ [-0.      0.4013]]
+Explained variance ratio: [0.9291 0.0709]
+[saved] outputs/exp02_covariance_eigen/covariance_eigen.png

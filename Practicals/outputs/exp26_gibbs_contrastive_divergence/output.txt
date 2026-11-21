@@ -1,0 +1,13 @@
+Trained tiny RBM. Top-3 most probable visible states (exact):
+   [0 0 0 0 1 1 1 1] p = 0.2244
+   [1 1 1 1 0 0 0 0] p = 0.2094
+   [1 0 1 0 1 0 1 0] p = 0.1773
+
+Total-variation distance between 2000 Gibbs chains and the exact model distribution: step 1 = 0.250, step 10 = 0.070, step 60 = 0.061
+
+Exact average log-likelihood (higher is better; max possible = -entropy of the data):
+  CD-1 : epoch 10 = -4.828, epoch 40 = -2.960, epoch 80 = -2.773 | recon MSE 0.0455
+  CD-5 : epoch 10 = -4.830, epoch 40 = -2.961, epoch 80 = -2.777 | recon MSE 0.0464
+  CD-20: epoch 10 = -4.828, epoch 40 = -2.929, epoch 80 = -2.752 | recon MSE 0.0455
+  PCD-1: epoch 10 = -4.821, epoch 40 = -2.955, epoch 80 = -2.840
+[saved] outputs/exp26_gibbs_contrastive_divergence/gibbs_cd_analysis.png

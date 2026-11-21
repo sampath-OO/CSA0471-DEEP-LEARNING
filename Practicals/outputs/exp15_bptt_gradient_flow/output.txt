@@ -1,0 +1,15 @@
+BPTT gradient check Wx: max abs difference 8.89e-11
+BPTT gradient check Wh: max abs difference 2.01e-10
+BPTT gradient check b : max abs difference 1.11e-10
+BPTT gradient check Wy: max abs difference 1.10e-10
+
+||dL/dh_t|| at t=1 vs t=T for several spectral radii of Wh
+  rho=0.5: ||dL/dh_T|| = 1.021e+00   ||dL/dh_1|| = 1.410e-14   ratio h_1/h_T = 1.380e-14
+  rho=0.9: ||dL/dh_T|| = 1.050e+00   ||dL/dh_1|| = 7.630e-06   ratio h_1/h_T = 7.269e-06
+  rho=1.0: ||dL/dh_T|| = 1.059e+00   ||dL/dh_1|| = 1.697e-04   ratio h_1/h_T = 1.603e-04
+  rho=1.2: ||dL/dh_T|| = 1.082e+00   ||dL/dh_1|| = 1.198e-02   ratio h_1/h_T = 1.107e-02
+  rho=1.6: ||dL/dh_T|| = 1.080e+00   ||dL/dh_1|| = 6.859e-01   ratio h_1/h_T = 6.352e-01
+
+Norm of Jacobian product after 40 steps: 1.698e-04 -> vanishing gradients for long dependencies
+[saved] outputs/exp15_bptt_gradient_flow/bptt_gradient_flow.png
+[saved] outputs/exp15_bptt_gradient_flow/bptt_gradient_heatmap.png

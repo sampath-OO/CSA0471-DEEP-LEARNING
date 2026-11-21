@@ -1,0 +1,18 @@
+Binarised 8x8 digits: (1797, 64)
+Before training: mean free energy of data = -24.77, of random noise = -24.61
+epoch   1: reconstruction MSE 0.1296 | free energy data   -37.62 | noise    -1.95
+epoch   6: reconstruction MSE 0.0745 | free energy data   -50.26 | noise    -0.09
+epoch  11: reconstruction MSE 0.0614 | free energy data   -56.21 | noise     0.34
+epoch  16: reconstruction MSE 0.0531 | free energy data   -60.15 | noise     0.67
+epoch  21: reconstruction MSE 0.0492 | free energy data   -67.03 | noise     0.40
+epoch  26: reconstruction MSE 0.0447 | free energy data   -68.98 | noise     0.53
+epoch  31: reconstruction MSE 0.0419 | free energy data   -71.25 | noise     0.24
+epoch  36: reconstruction MSE 0.0395 | free energy data   -74.00 | noise    -0.28
+
+After training: recon MSE 0.0383; data should have LOWER free energy than noise: -75.87 < -0.56
+Energy E(v,h) of first digit with a sampled hidden state: [-74.816]
+Check F(v) = -log sum_h exp(-E(v,h)) via brute-force on a 10-unit sub-model:
+   brute force -3.749481  vs  analytic free energy -3.749481
+[saved] outputs/exp25_rbm_energy_reconstruction/rbm_reconstructions.png
+[saved] outputs/exp25_rbm_energy_reconstruction/rbm_energy.png
+[saved] outputs/exp25_rbm_energy_reconstruction/rbm_filters.png

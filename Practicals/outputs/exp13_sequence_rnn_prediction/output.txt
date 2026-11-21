@@ -1,0 +1,28 @@
+   t     value
+0  0  0.010058
+1  1  0.297386
+2  2  0.640772
+3  3  0.830098
+4  4  0.944767 
+              t    value
+count  600.000  600.000
+mean   299.500    0.600
+std    173.349    0.851
+min      0.000   -1.106
+25%    149.750   -0.113
+50%    299.500    0.749
+75%    449.250    1.087
+max    599.000    2.628
+
+Windowed data: X(580, 20, 1) y(580,) | train 460 | test 120 | look-back = 20
+epoch  1: train loss 0.0644  val loss 0.1084
+epoch 11: train loss 0.0142  val loss 0.0227
+epoch 21: train loss 0.0126  val loss 0.0193
+epoch 31: train loss 0.0112  val loss 0.0196
+epoch 41: train loss 0.0104  val loss 0.0174
+epoch 51: train loss 0.0087  val loss 0.0163
+
+Backend: NumPy RNN (BPTT)
+Train RMSE (original units): 0.1108 | Test RMSE: 0.1521
+Naive baseline (repeat last value) test RMSE: 0.1972
+[saved] outputs/exp13_sequence_rnn_prediction/rnn_prediction.png

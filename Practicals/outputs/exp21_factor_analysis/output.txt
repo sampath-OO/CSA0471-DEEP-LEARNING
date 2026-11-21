@@ -1,0 +1,68 @@
+Wine data: (178, 13) | classes: [np.str_('class_0'), np.str_('class_1'), np.str_('class_2')]
+factors | CV log-likelihood
+      1 | -19.8147
+      2 | -19.5591
+      3 | -19.3874
+      4 | -18.7205
+      5 | -19.0625
+      6 | -19.0597
+      7 | -19.1830
+      8 | -19.1913
+Best number of factors by CV: 4
+
+Varimax-rotated loadings (3 factors):
+                                  F1     F2     F3
+alcohol                       0.186 -0.752  0.165
+malic_acid                   -0.414 -0.204 -0.260
+ash                           0.161 -0.342 -0.608
+alcalinity_of_ash            -0.258  0.163 -0.868
+magnesium                     0.206 -0.350 -0.033
+total_phenols                 0.875 -0.171  0.075
+flavanoids                    0.957 -0.068  0.105
+nonflavanoid_phenols         -0.521  0.011 -0.281
+proanthocyanins               0.658 -0.098  0.026
+color_intensity              -0.238 -0.819 -0.101
+hue                           0.576  0.341  0.215
+od280/od315_of_diluted_wines  0.830  0.208  0.118
+proline                       0.462 -0.592  0.251
+
+Communalities (variance explained by common factors):
+ alcohol                         0.628
+malic_acid                      0.280
+ash                             0.513
+alcalinity_of_ash               0.846
+magnesium                       0.166
+total_phenols                   0.800
+flavanoids                      0.931
+nonflavanoid_phenols            0.351
+proanthocyanins                 0.443
+color_intensity                 0.737
+hue                             0.495
+od280/od315_of_diluted_wines    0.746
+proline                         0.628
+dtype: float64
+Uniqueness (noise variance):
+ alcohol                         0.372
+malic_acid                      0.720
+ash                             0.486
+alcalinity_of_ash               0.155
+magnesium                       0.834
+total_phenols                   0.200
+flavanoids                      0.069
+nonflavanoid_phenols            0.649
+proanthocyanins                 0.557
+color_intensity                 0.263
+hue                             0.506
+od280/od315_of_diluted_wines    0.254
+proline                         0.372
+dtype: float64
+
+SS loadings per factor: [4.018 2.098 1.449] | total variance explained: 58.2%
+
+Interpretation: top-loading variables per factor
+  F1: flavanoids (+0.96), total_phenols (+0.87), od280/od315_of_diluted_wines (+0.83), proanthocyanins (+0.66)
+  F2: color_intensity (-0.82), alcohol (-0.75), proline (-0.59), magnesium (-0.35)
+  F3: alcalinity_of_ash (-0.87), ash (-0.61), nonflavanoid_phenols (-0.28), malic_acid (-0.26)
+
+Factor score correlation with class label: [np.float64(-0.844), np.float64(0.064), np.float64(-0.335)]
+[saved] outputs/exp21_factor_analysis/factor_analysis.png

@@ -1,0 +1,15 @@
+Part A - ill-conditioned quadratic f(w)=0.5(w1^2+25 w2^2), start (4,1)
+  GD       : final w = [0.64323 0.     ], f = 2.069e-01
+  Momentum : final w = [-0.14672  0.02635], f = 1.944e-02
+  Adam     : final w = [0.01584 0.01351], f = 2.407e-03
+[saved] outputs/exp06_optimizers_comparison/optimizer_trajectories.png
+
+Part B - linear regression (true w = [1, 2, -3, 0.5], noise var 0.25)
+  Batch GD        : w = [ 1.013  1.97  -2.965  0.517], final MSE = 0.2527
+  SGD (batch=1)   : w = [ 1.034  2.004 -2.936  0.606], final MSE = 0.2627
+  Mini-batch (32) : w = [ 1.059  1.999 -2.962  0.503], final MSE = 0.2551
+  SGD+Momentum    : w = [ 0.989  1.982 -2.98   0.511], final MSE = 0.2536
+  Adam            : w = [ 1.066  1.971 -2.987  0.466], final MSE = 0.2581
+[saved] outputs/exp06_optimizers_comparison/linear_regression_optimizers.png
+
+Part C skipped: TensorFlow is not installed in this environment (Parts A and B use NumPy).

@@ -1,0 +1,5 @@
+[saved] outputs/exp14_unfolded_rnn_visualization/rnn_folded_unfolded.png
+RNN parameters (in=3, hidden=8, out=1): Wx 24 + Wh 64 + b 8 + Wy 8 + by 1 = 105
+Parameter count is the same for any sequence length (weight sharing).
+Without sharing, an unfolded T=5 net would need 525 parameters.
+[saved] outputs/exp14_unfolded_rnn_visualization/rnn_hidden_states.png

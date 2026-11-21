@@ -1,0 +1,9 @@
+[saved] outputs/exp03_probability_bayes/distributions.png
+Mean/Var Binomial(20,0.5): (np.float64(10.0), np.float64(5.0)) | Poisson(4): (np.float64(4.0), np.float64(4.0))
+P(-1.96 < Z < 1.96) = 0.95
+MLE from samples: mu = 0.991, sigma = 1.991 (true 1, 2)
+
+Bayes' theorem: P(disease)=0.01, sensitivity=0.95, specificity=0.9
+P(positive) = 0.1085  ->  P(disease | positive) = 0.0876
+Monte-Carlo check of posterior: 0.0877
+[saved] outputs/exp03_probability_bayes/bayes_theorem.png
